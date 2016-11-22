@@ -1,15 +1,17 @@
 # Minesweeper-Solver 
-A Minesweeper solver based on Java 
+
+A Minesweeper solver, written in Java 
  
-This is a solver to solve your minesweeper game, since it's so hard to do it yourself. It works by taking a screenshot, analyze it, then taking over the mouse and moving it to where ever happens to be a mine or not.  
+This is a solver to solve a minesweeper game for you. I mean, it is too tedious to do it yourself, right? It works by taking a screenshot, analyze it, then moving the mouse to where ever happens to be a mine.  
  
 It's completely self-contained and works pretty good. In the current form it solves only games from [Minesweeper X]
-(http://www.minesweeper.info/downloads/MinesweeperX.html) with the "vistabluemineskin" skin. This is because it analyzes the screenshot pixel by pixel comparing the color of blocks with the ones in the skin. It's however possible to adjust this easily by changing the static color variables (most easily by using the "debug" method in board.java). 
+(http://www.minesweeper.info/downloads/MinesweeperX.html) with the "vistabluemineskin" skin. This is because it analyzes the screenshot pixel by pixel comparing the color of blocks with the ones in the skin. 
+You can change it, though. CHnage the static color variables in Board.java. I even left the "debug" method in, which will print the correct color.
  
 The solving process involves two solving strategies. 
- 1. Single   (if blocks around equal the number on the block -> open / else flag) 
- 2. Multiple ([Tank solver by LuckyToile](https://luckytoilet.wordpress.com/2012/12/23/2125/))
+ 1. Neighbours, solve field by field 
+ 2. Multiple, for each case where more logic is required ([Tank solver by LuckyToile](https://luckytoilet.wordpress.com/2012/12/23/2125/))
  
-Please keep in mind that you need luck to solve minesweeper since there is no 100% guaranteed strategy.. this includes this solver, it can't solve every game and will fail from time to time
+Please keep in mind that I (or anyone else) can guarantee to solve a game. The nature of minesweeper doesn't allow for a fool proof strategy.
 
-![demo](http://stillhart.biz/project/minesweeper-solver/demo.gif)
+![example](https://raw.githubusercontent.com/arcs-/Minesweeper-Solver/master/resources/example.gif)
